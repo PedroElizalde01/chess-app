@@ -3,3 +3,6 @@
 
 # Ignore Gradle build output directory
 build
+
+# Ignore Gradle GUI config
+src/main/build.gradle.kts
