@@ -1,30 +1,53 @@
 import edu.austral.dissis.chess.gui.*;
 import exception.EmptyTileException;
+import gamemodes.Capablanca;
 import gamemodes.Classic;
 import board.Board;
+import gamemodes.GameMode;
 import org.jetbrains.annotations.NotNull;
-import validation.GameValidator;
+import validation.PromotionValidator;
 import validation.VictoryValidator;
+
+import java.util.Scanner;
 
 import static translator.Translator.translatePieces;
 import static translator.Translator.translateMove;
 
 public class MyGameEngine implements GameEngine {
 
-    private final Classic classic = new Classic();
+    private GameMode gameMode=null;
     private PlayerColor currentColor = PlayerColor.WHITE;
-    private VictoryValidator victoryValidator = new VictoryValidator();
+    private final VictoryValidator victoryValidator = new VictoryValidator();
+    private final PromotionValidator promotionValidator = new PromotionValidator();
+
+    private GameMode chooseGameMode() {
+        Scanner myObj = new Scanner(System.in);
+        System.out.println(
+                "Enter game mode: \n 1 for Classic \n 2 for Capablanca"
+        );
+        int gameMode = myObj.nextInt();
+        return switch (gameMode) {
+            case 1 -> new Classic();
+            case 2 -> new Capablanca();
+            default -> new Classic();
+        };
+    }
 
     @NotNull
     @Override
     public MoveResult applyMove(@NotNull Move move) {
-        movement.Move castedMove = translateMove(move, classic.getBoard());
+        movement.Move castedMove = translateMove(move, gameMode.getBoard());
         try {
             if(castedMove.getFrom().isEmpty()) throw new EmptyTileException();
-            classic.move(castedMove);
-            return victoryValidator.checkMove(classic.getBoard(),castedMove,currentColor) != null ?
-                    victoryValidator.checkMove(classic.getBoard(),castedMove,currentColor) :
-                    new NewGameState(translatePieces(classic.getBoard().getTiles()), changeColor());
+            gameMode.move(castedMove);
+            if (victoryValidator.checkMove(gameMode.getBoard(), castedMove,currentColor) != null){
+                return victoryValidator.checkMove(gameMode.getBoard(), castedMove,currentColor);
+            }else{
+                if (promotionValidator.checkMove(gameMode.getBoard(), castedMove,currentColor) != null){
+                    return promotionValidator.checkMove(gameMode.getBoard(), castedMove,currentColor);
+                }
+            }
+            return new NewGameState(translatePieces(gameMode.getBoard().getTiles()), changeColor());
         } catch (Exception e) {
             return new InvalidMove(e.getMessage());
         }
@@ -33,11 +56,12 @@ public class MyGameEngine implements GameEngine {
     @NotNull
     @Override
     public InitialState init() {
-        return new InitialState(new BoardSize(classic.getBoard().getWidth(),classic.getBoard().getHeight()), translatePieces(classic.getBoard().getTiles()), PlayerColor.WHITE);
+        this.gameMode = chooseGameMode();
+        return new InitialState(new BoardSize(gameMode.getBoard().getWidth(),gameMode.getBoard().getHeight()), translatePieces(gameMode.getBoard().getTiles()), PlayerColor.WHITE);
     }
 
     public Board getBoard() {
-        return classic.getBoard();
+        return gameMode.getBoard();
     }
 
     public PlayerColor changeColor(){

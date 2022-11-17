@@ -55,7 +55,7 @@ public class ClassicBoard implements Board {
         initialTiles.add(new Tile(new Position(0,4), new Piece("w40", "king", PlayerColor.WHITE, new QueenMovementValidator(false, 1))));
         initialTiles.add(new Tile(new Position(7,4), new Piece("b47", "king", PlayerColor.BLACK, new QueenMovementValidator(false, 1))));
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < size; i++) {
             initialTiles.add(new Tile(new Position(1, i), new Piece("0w" + i, "pawn", PlayerColor.WHITE, new PawnMovementValidator(1))));
             initialTiles.add(new Tile(new Position(6, i), new Piece("7b" + i, "pawn", PlayerColor.BLACK, new PawnMovementValidator(-1))));
         }

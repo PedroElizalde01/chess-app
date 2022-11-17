@@ -1,9 +1,11 @@
 package gamemodes;
 
 import board.Board;
+import board.CapablancaBoard;
 import board.ClassicBoard;
 import edu.austral.dissis.chess.gui.PlayerColor;
 import exception.NotYourPieceException;
+import exception.OffLimitsException;
 import movement.Move;
 import player.Player;
 
@@ -11,22 +13,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class Classic implements GameMode{
+public class Capablanca implements GameMode{
 
-    private ClassicBoard board;
+    private CapablancaBoard board;
     private Stack<Move> movements;
     private List<Player> players;
     private boolean whiteTurn;
 
-    public Classic(ClassicBoard board, List<Player> players) {
+    public Capablanca(CapablancaBoard board, List<Player> players) {
         this.board = board;
         this.movements = new Stack<>();
         this.players = players;
         this.whiteTurn = true;
     }
 
-    public Classic() {
-        this.board = new ClassicBoard();
+    public Capablanca() {
+        this.board = new CapablancaBoard();
         this.movements = new Stack<>();
         List<Player> players = new ArrayList<>();
         players.add(new Player("Player 1", PlayerColor.WHITE));
@@ -48,11 +50,23 @@ public class Classic implements GameMode{
 
     public Board updateBoard(Board newBoard) {
         Board oldBoard = getBoard();
-        this.board = (ClassicBoard) newBoard;
+        this.board = (CapablancaBoard) newBoard;
         return oldBoard;
     }
 
     public Board getBoard() {
         return board;
+    }
+
+    public Stack<Move> getMovements() {
+        return movements;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public boolean isWhiteTurn() {
+        return whiteTurn;
     }
 }
