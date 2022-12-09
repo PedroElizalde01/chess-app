@@ -3,7 +3,6 @@ package factory
 import model.piece.Color
 import model.piece.NormalPiece
 import model.piece.Piece
-import model.piece.SpecialPiece
 import model.validators.ValidatorMove
 import model.validators.move.*
 
@@ -55,7 +54,7 @@ class PieceFactory {
         val validators = ArrayList<ValidatorMove>()
         validators.add(VerticalMoveValidator(0, false))
         validators.add(VerticalMoveValidator(0, true))
-        validators.add(HorizontalMoveValidator(0, false))
+        validators.add(HorizontalMoveValidator(0, true))
         validators.add(HorizontalMoveValidator(0, false))
         validators.add(DiagonalMoveValidator(0, listOf(1,2,3,4)))
         return NormalPiece(id, "queen", validators, hasMap, false, false, color)
@@ -67,9 +66,50 @@ class PieceFactory {
         val validators = ArrayList<ValidatorMove>()
         validators.add(VerticalMoveValidator(1, false))
         validators.add(VerticalMoveValidator(1, true))
-        validators.add(HorizontalMoveValidator(1, false))
+        validators.add(HorizontalMoveValidator(1, true))
         validators.add(HorizontalMoveValidator(1, false))
         validators.add(DiagonalMoveValidator(1, listOf(1,2,3,4)))
         return NormalPiece(id, "king", validators, hashMap, true, false, color)
+    }
+
+    fun createChancellor(id:String, color: Color) : Piece {
+        val hashMap = HashMap<String, Int>()
+        hashMap.put("moves", 0)
+        val validators = ArrayList<ValidatorMove>()
+        validators.add(VerticalMoveValidator(0, false))
+        validators.add(VerticalMoveValidator(0, true))
+        validators.add(HorizontalMoveValidator(0, false))
+        validators.add(HorizontalMoveValidator(0, false))
+        validators.add(JumpMoveValidator(1,2))
+        validators.add(JumpMoveValidator(2,1))
+        validators.add(JumpMoveValidator(1,-2))
+        validators.add(JumpMoveValidator(2,-1))
+        validators.add(JumpMoveValidator(-1,2))
+        validators.add(JumpMoveValidator(-2,1))
+        validators.add(JumpMoveValidator(-1,-2))
+        validators.add(JumpMoveValidator(-2,-1))
+        return NormalPiece(id, "chancellor", validators, hashMap, false, false, color)
+    }
+
+    fun createArchbichop(id: String, color: Color) : Piece{
+        val hashMap = HashMap<String, Int>()
+        hashMap.put("moves", 0)
+        val validators = ArrayList<ValidatorMove>()
+        validators.add(DiagonalMoveValidator(0, listOf(1,2,3,4)))
+        validators.add(JumpMoveValidator(1,2))
+        validators.add(JumpMoveValidator(2,1))
+        validators.add(JumpMoveValidator(1,-2))
+        validators.add(JumpMoveValidator(2,-1))
+        validators.add(JumpMoveValidator(-1,2))
+        validators.add(JumpMoveValidator(-2,1))
+        validators.add(JumpMoveValidator(-1,-2))
+        validators.add(JumpMoveValidator(-2,-1))
+        return NormalPiece(id, "archbishop", validators, hashMap, false, false, color)
+    }
+
+    fun createAntiPawn(id:String, color:Color) :Piece{
+        val hashMap = HashMap<String, Int>()
+        hashMap.put("moves", 0)
+        return NormalPiece(id,"pawn", listOf(AntiPawnMoveValidator()), hashMap, false, true, color)
     }
 }

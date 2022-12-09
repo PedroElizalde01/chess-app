@@ -26,9 +26,9 @@ class PawnMoveValidator : ClassicValidator() {
             if(from.piece?.data?.get("moves") == 0 && !to.hasPiece()){
                 if(from.x == to.x && from.y == to.y - 2 && color == Color.WHITE)
                     return Response(true, "")
+                if(from.x == to.x && from.y == to.y + 2 && color == Color.BLACK)
+                    return Response(true, "")
             }
-            if(from.x == to.x && from.y == to.y + 2 && color == Color.BLACK)
-                return Response(true, "")
         } else {
             throw Exception(validateClassicConditions(from,to,color,board).error)
         }

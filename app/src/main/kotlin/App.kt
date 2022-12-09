@@ -6,11 +6,14 @@ import edu.austral.dissis.chess.gui.CachedImageResolver
 import edu.austral.dissis.chess.gui.DefaultImageResolver
 import edu.austral.dissis.chess.gui.GameView
 import edu.austral.dissis.chess.gui.SimpleGameEngine
+import factory.GameFactory
 import javafx.application.Application
 import javafx.application.Application.launch
 import javafx.scene.Scene
 import javafx.stage.Stage
 import model.CustomGameEngine
+import model.Game
+import java.util.*
 
 
 fun main() {
@@ -18,19 +21,38 @@ fun main() {
 }
 
 class ChessGameApplication : Application() {
-    private val gameEngine = CustomGameEngine()
+    var name : String = "Chess - "
+    private val gameEngine = CustomGameEngine(chooseGameMode())
     private val imageResolver = CachedImageResolver(DefaultImageResolver())
 
-    companion object {
-        const val GameTitle = "Chess"
-    }
-
     override fun start(primaryStage: Stage) {
-        primaryStage.title = GameTitle
+        primaryStage.title = name
 
         val root = GameView(gameEngine, imageResolver)
         primaryStage.scene = Scene(root)
 
         primaryStage.show()
+    }
+
+    private fun chooseGameMode(): Game {
+        val scanner = Scanner(System.`in`)
+        println(
+            "Enter game mode: \n 1 for Classic \n 2 for Capablanca \n 3 for AntiPawn"
+        )
+        val gameMode = scanner.nextInt()
+        when(gameMode){
+            2 -> {
+                name += "Capablanca"
+                return GameFactory().createCapablancaGame()
+            }
+            3 -> {
+                name += "AntiPawn"
+                return GameFactory().createAntiPawnGame()
+            }
+            else -> {
+                name += "Classic"
+                return GameFactory().createClassicGame()
+            }
+        }
     }
 }

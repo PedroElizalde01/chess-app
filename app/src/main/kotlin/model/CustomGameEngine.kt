@@ -3,30 +3,29 @@ package model
 import edu.austral.dissis.chess.gui.*
 import factory.GameFactory
 import model.piece.Color
+import java.util.*
 
-class CustomGameEngine : GameEngine {
-
-    var classic = GameFactory().createClassicGame()
+class CustomGameEngine(var game:Game) : GameEngine {
 
     override fun applyMove(move: Move): MoveResult {
         try {
-            if (classic.isInCheckMate()) {
-                if (classic.getTurn() == Color.WHITE) {
+            if (game.isInCheckMate()) {
+                if (game.getTurn() == Color.WHITE) {
                     return GameOver(PlayerColor.BLACK)
                 } else {
                     return GameOver(PlayerColor.WHITE)
                 }
             }
-            classic = classic.movePiece(move.from.column, move.from.row, move.to.column, move.to.row)
-            if (classic.getTurn() == Color.WHITE) {
+            game = game.movePiece(move.from.column, move.from.row, move.to.column, move.to.row)
+            if (game.getTurn() == Color.WHITE) {
                 val moveResult = NewGameState(chessPieces(), PlayerColor.WHITE)
-                if (classic.isInCheckMate()) {
+                if (game.isInCheckMate()) {
                     return GameOver(PlayerColor.BLACK)
                 }
                 return moveResult
             } else {
                 val moveResult = NewGameState(chessPieces(), PlayerColor.BLACK)
-                if (classic.isInCheckMate()) {
+                if (game.isInCheckMate()) {
                     return GameOver(PlayerColor.WHITE)
                 }
                 return moveResult
@@ -37,13 +36,26 @@ class CustomGameEngine : GameEngine {
     }
 
     override fun init(): InitialState {
-        return InitialState(BoardSize(8,8), chessPieces(), PlayerColor.WHITE)
+        return InitialState(BoardSize(game.getBoard().getBoardWidth(),game.getBoard().getBoardHeight()), chessPieces(), PlayerColor.WHITE)
+    }
+
+    private fun chooseGameMode(): Game {
+        val scanner = Scanner(System.`in`)
+        println(
+            "Enter game mode: \n 1 for Classic \n 2 for Capablanca \n 3 for AntiPawn"
+        )
+        val gameMode = scanner.nextInt()
+        when(gameMode){
+            2 -> return GameFactory().createCapablancaGame()
+            3 -> return GameFactory().createAntiPawnGame()
+            else -> return GameFactory().createClassicGame()
+        }
     }
 
     private fun chessPieces() : List<ChessPiece>{
         val listChessPieces = ArrayList<ChessPiece>()
-        for ( piece in classic.getBoard().getAllPieces()){
-            val tile = classic.getBoard().getTileById(piece.id)
+        for ( piece in game.getBoard().getAllPieces()){
+            val tile = game.getBoard().getTileById(piece.id)
             if ( piece.getColor() == Color.WHITE){
                 listChessPieces.add(ChessPiece(piece.id, PlayerColor.WHITE, Position(tile.y, tile.x), piece.type.toString()))
             }else{
