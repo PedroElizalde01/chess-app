@@ -37,7 +37,7 @@ class ChessGameApplication : Application() {
     private fun chooseGameMode(): Game {
         val scanner = Scanner(System.`in`)
         println(
-            "Enter game mode: \n 1 for Classic \n 2 for Capablanca \n 3 for AntiPawn"
+            "Enter game mode: \n 1: Classic \n 2: Capablanca \n 3: AntiPawn"
         )
         val gameMode = scanner.nextInt()
         when(gameMode){

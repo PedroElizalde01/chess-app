@@ -1,7 +1,6 @@
 package model
 
 import edu.austral.dissis.chess.gui.*
-import factory.GameFactory
 import model.piece.Color
 import java.util.*
 
@@ -37,19 +36,6 @@ class CustomGameEngine(var game:Game) : GameEngine {
 
     override fun init(): InitialState {
         return InitialState(BoardSize(game.getBoard().getBoardWidth(),game.getBoard().getBoardHeight()), chessPieces(), PlayerColor.WHITE)
-    }
-
-    private fun chooseGameMode(): Game {
-        val scanner = Scanner(System.`in`)
-        println(
-            "Enter game mode: \n 1 for Classic \n 2 for Capablanca \n 3 for AntiPawn"
-        )
-        val gameMode = scanner.nextInt()
-        when(gameMode){
-            2 -> return GameFactory().createCapablancaGame()
-            3 -> return GameFactory().createAntiPawnGame()
-            else -> return GameFactory().createClassicGame()
-        }
     }
 
     private fun chessPieces() : List<ChessPiece>{
