@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>model.tile.Tile</OriginalElement>
+  <nodes>
+    <node x="1317.2540584415585" y="1365.5">model.validators.SpecialValidatorMove</node>
+    <node x="540.8165584415585" y="1979.0">model.piece.NormalPiece</node>
+    <node x="560.193332695547" y="2793.0">model.Game</node>
+    <node x="3801.1933326955473" y="2339.0">model.validators.CheckValidator</node>
+    <node x="1199.4623917748918" y="531.0">model.piece.Color</node>
+    <node x="564.1933326955473" y="2545.0">model.validators.ClassicMover</node>
+    <node x="1459.50586042449" y="0.0">model.tile.TileWithPiece</node>
+    <node x="2762.205419601505" y="1299.0">model.validators.ClassicValidator</node>
+    <node x="3338.2565393726136" y="2056.0">model.validators.move.AntiPawnMoveValidator</node>
+    <node x="1136.8165584415585" y="1979.0">model.piece.SpecialPiece</node>
+    <node x="4101.526666028881" y="2556.0">model.validators.CheckMateValidator</node>
+    <node x="2053.476280663781" y="1677.5">model.validators.move.VerticalMoveValidator</node>
+    <node x="2140.6933326955473" y="2090.0">model.validators.PromotionValidator</node>
+    <node x="3046.9905663780664" y="498.0">model.tile.Tile</node>
+    <node x="2338.476280663781" y="1677.5">model.validators.move.JumpMoveValidator</node>
+    <node x="2111.6933326955473" y="2373.0">model.validators.PromotionValidator.Companion</node>
+    <node x="97.8165584415583" y="1612.0">model.piece.Piece</node>
+    <node x="1526.4308604244898" y="254.0">model.tile.TileEmpty</node>
+    <node x="2909.476280663781" y="1677.5">model.validators.move.HorizontalMoveValidator</node>
+    <node x="1636.2540584415585" y="1171.0">model.validators.ValidatorMove</node>
+    <node x="3482.1933326955473" y="1677.5">model.validators.move.DiagonalMoveValidator</node>
+    <node x="243.81655844155853" y="2067.0">model.WinCondition</node>
+    <node x="2370.476280663781" y="857.5">model.validators.Response</node>
+    <node x="2499.5683326955473" y="2056.0">model.validators.move.PawnMoveValidator</node>
+    <node x="3112.5683326955473" y="747.0">model.board.Board</node>
+    <node x="583.193332695547" y="3145.0">model.CustomGameEngine</node>
+    <node x="2623.476280663781" y="1700.0">model.validators.move.PawnCaptureMoveValidator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.validators.ClassicValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="143.5999999999999" y="-94.5" />
+      <point x="3085.3054196015046" y="1268.0" />
+      <point x="3056.5880739867143" y="1268.0" />
+      <point x="3056.5880739867143" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.ValidatorMove" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="-33.125" y="-28.0" />
+      <point x="1735.6290584415585" y="1110.0" />
+      <point x="1708.0040584415585" y="1110.0" />
+      <point x="1708.0040584415585" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-119.5454545454545" y="-73.0" />
+      <point x="576.1478781500928" y="2524.0" />
+      <point x="87.3165584415583" y="2524.0" />
+      <point x="87.3165584415583" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.board.Board" target="model.tile.Tile" relationship="TO_MANY">
+      <point x="0.0" y="-161.0" />
+      <point x="3221.0683326955473" y="696.0" />
+      <point x="3157.4905663780664" y="696.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="model.tile.Tile" target="model.tile.TileWithPiece" relationship="DEPENDENCY">
+      <point x="73.66666666666674" y="-83.5" />
+      <point x="3231.157233044733" y="476.0" />
+      <point x="3168.2405663780664" y="476.0" />
+      <point x="3168.2405663780664" y="222.0" />
+      <point x="1642.1808604244898" y="222.0" />
+      <point x="1642.1808604244898" y="212.0" />
+      <point x="1614.2058604244899" y="212.0" />
+      <point x="44.19999999999999" y="95.0" />
+    </edge>
+    <edge source="model.board.Board" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="72.33333333333337" y="-161.0" />
+      <point x="3293.4016660288808" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.CheckValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="35.08333333333326" y="-62.0" />
+      <point x="4046.7766660288808" y="2318.0" />
+      <point x="4017.1933326955473" y="2318.0" />
+      <point x="4017.1933326955473" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="47.818181818181756" y="-73.0" />
+      <point x="743.511514513729" y="2494.0" />
+      <point x="3779.693332695547" y="2494.0" />
+      <point x="3779.6933326955473" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.piece.NormalPiece" target="model.piece.Color" relationship="TO_ONE">
+      <point x="-239.58333333333326" y="-139.0" />
+      <point x="588.7332251082253" y="1938.0" />
+      <point x="509.9623917748918" y="1938.0" />
+      <point x="509.9623917748918" y="726.0" />
+      <point x="582.0551504837251" y="726.0" />
+      <point x="582.0551504837251" y="686.0" />
+      <point x="1228.7123917748918" y="686.0" />
+      <point x="-29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.CheckValidator" target="model.validators.ValidatorMove" relationship="DEPENDENCY">
+      <point x="-35.08333333333326" y="-62.0" />
+      <point x="3976.609999362214" y="2318.0" />
+      <point x="4006.1933326955473" y="2318.0" />
+      <point x="4006.1933326955473" y="1278.0" />
+      <point x="1770.4093171503919" y="1278.0" />
+      <point x="1770.4093171503919" y="1268.0" />
+      <point x="1801.8790584415585" y="1268.0" />
+      <point x="33.125" y="28.0" />
+    </edge>
+    <edge source="model.validators.move.DiagonalMoveValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="-53.0" y="-62.0" />
+      <point x="3561.6933326955473" y="1590.0" />
+      <point x="3516.5102962089363" y="1590.0" />
+      <point x="3516.5102962089363" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.validators.PromotionValidator.Companion" target="model.validators.Response" relationship="CREATE">
+      <point x="-48.200000000000045" y="-28.0" />
+      <point x="2183.993332695547" y="2288.0" />
+      <point x="1911.7540584415585" y="2288.0" />
+      <point x="1911.7540584415585" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.board.Board" target="model.piece.Piece" relationship="DEPENDENCY">
+      <point x="-72.33333333333337" y="161.0" />
+      <point x="3148.734999362214" y="1120.0" />
+      <point x="323.11307398671397" y="1120.0" />
+      <point x="323.11307398671397" y="1570.0" />
+      <point x="317.86307398671397" y="1570.0" />
+      <point x="317.86307398671397" y="1590.0" />
+      <point x="287.51655844155835" y="1590.0" />
+      <point x="54.200000000000045" y="-127.5" />
+    </edge>
+    <edge source="model.tile.Tile" target="model.tile.TileEmpty" relationship="DEPENDENCY">
+      <point x="-73.66666666666674" y="-83.5" />
+      <point x="3083.8238997113995" y="476.0" />
+      <point x="1664.5558604244898" y="476.0" />
+      <point x="27.625" y="95.0" />
+    </edge>
+    <edge source="model.piece.SpecialPiece" target="model.validators.ValidatorMove" relationship="TO_MANY">
+      <point x="206.0" y="-139.0" />
+      <point x="1703.3165584415585" y="1958.0" />
+      <point x="1759.4093171503919" y="1958.0" />
+      <point x="1759.4093171503919" y="1258.0" />
+      <point x="1735.6290584415585" y="1258.0" />
+      <point x="-33.125" y="28.0" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.validators.ClassicValidator" relationship="GENERALIZATION">
+      <point x="63.77777777777783" y="-62.0" />
+      <point x="2706.846110473325" y="1938.0" />
+      <point x="2898.976280663781" y="1938.0" />
+      <point x="2898.976280663781" y="1590.0" />
+      <point x="2941.705419601505" y="1590.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="model.tile.TileWithPiece" target="model.piece.Piece" relationship="DEPENDENCY">
+      <point x="-44.19999999999993" y="95.0" />
+      <point x="1525.80586042449" y="232.0" />
+      <point x="295.5891660288805" y="232.0" />
+      <point x="295.5891660288805" y="1570.0" />
+      <point x="317.86307398671397" y="1570.0" />
+      <point x="317.86307398671397" y="1590.0" />
+      <point x="287.51655844155835" y="1590.0" />
+      <point x="54.200000000000045" y="-127.5" />
+    </edge>
+    <edge source="model.validators.move.PawnCaptureMoveValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="-106.0" y="-39.5" />
+      <point x="2649.976280663781" y="1540.0" />
+      <point x="2491.089193757823" y="1540.0" />
+      <point x="2491.089193757823" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.validators.CheckValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="175.41666666666674" y="-62.0" />
+      <point x="4187.109999362214" y="2308.0" />
+      <point x="4099.512491753566" y="2308.0" />
+      <point x="4099.512491753566" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="95.66666666666674" y="-62.0" />
+      <point x="2738.734999362214" y="1948.0" />
+      <point x="3184.976280663781" y="1948.0" />
+      <point x="3184.976280663781" y="1550.0" />
+      <point x="3378.5683326955473" y="1550.0" />
+      <point x="3378.5683326955473" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.piece.Piece" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-54.200000000000045" y="-127.5" />
+      <point x="179.11655844155825" y="1590.0" />
+      <point x="147.02666602888053" y="1590.0" />
+      <point x="147.02666602888053" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.Game" target="model.WinCondition" relationship="DEPENDENCY">
+      <point x="-29.035714285714448" y="-150.0" />
+      <point x="666.6576184098326" y="2722.0" />
+      <point x="70.58928571428578" y="2722.0" />
+      <point x="70.58928571428578" y="2308.0" />
+      <point x="695.6933326955473" y="2308.0" />
+      <point x="695.6933326955473" y="2278.0" />
+      <point x="451.5665584415585" y="2278.0" />
+      <point x="69.25" y="51.0" />
+    </edge>
+    <edge source="model.piece.Piece" target="model.validators.ValidatorMove" relationship="DEPENDENCY">
+      <point x="0.0" y="-127.5" />
+      <point x="233.3165584415583" y="1580.0" />
+      <point x="759.691530712616" y="1580.0" />
+      <point x="759.691530712616" y="1278.0" />
+      <point x="1770.4093171503919" y="1278.0" />
+      <point x="1770.4093171503919" y="1268.0" />
+      <point x="1801.8790584415585" y="1268.0" />
+      <point x="33.125" y="28.0" />
+    </edge>
+    <edge source="model.Game" target="model.validators.CheckValidator" relationship="TO_ONE">
+      <point x="29.03571428571422" y="-150.0" />
+      <point x="724.7290469812613" y="2722.0" />
+      <point x="3996.3458250869" y="2722.0" />
+      <point x="3996.3458250868994" y="2504.0" />
+      <point x="3906.4433326955473" y="2504.0" />
+      <point x="-105.25" y="62.0" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.validators.move.PawnCaptureMoveValidator" relationship="TO_ONE">
+      <point x="0.0" y="-62.0" />
+      <point x="2643.0683326955473" y="1918.0" />
+      <point x="2689.726280663781" y="1918.0" />
+      <point x="-66.25" y="39.5" />
+    </edge>
+    <edge source="model.validators.ValidatorMove" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="99.375" y="-28.0" />
+      <point x="1868.1290584415585" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.tile.TileWithPiece" target="model.tile.TileEmpty" relationship="CREATE">
+      <point x="0.0" y="95.0" />
+      <point x="1570.00586042449" y="232.0" />
+      <point x="1581.6808604244898" y="232.0" />
+      <point x="-55.25" y="-95.0" />
+    </edge>
+    <edge source="model.tile.TileEmpty" target="model.piece.Piece" relationship="DEPENDENCY">
+      <point x="-27.625" y="95.0" />
+      <point x="1609.3058604244898" y="476.0" />
+      <point x="317.86307398671397" y="476.0" />
+      <point x="317.86307398671397" y="1590.0" />
+      <point x="287.51655844155835" y="1590.0" />
+      <point x="54.200000000000045" y="-127.5" />
+    </edge>
+    <edge source="model.tile.TileEmpty" target="model.tile.TileWithPiece" relationship="CREATE">
+      <point x="55.25" y="-95.0" />
+      <point x="1692.1808604244898" y="222.0" />
+      <point x="1642.1808604244898" y="222.0" />
+      <point x="1642.1808604244898" y="212.0" />
+      <point x="1614.2058604244899" y="212.0" />
+      <point x="44.19999999999999" y="95.0" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-127.55555555555554" y="-62.0" />
+      <point x="2515.5127771399916" y="1958.0" />
+      <point x="2031.9762806637807" y="1958.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.validators.CheckValidator" relationship="DEPENDENCY">
+      <point x="119.5454545454545" y="-73.0" />
+      <point x="815.2387872410018" y="2514.0" />
+      <point x="4007.3458250868994" y="2514.0" />
+      <point x="4007.3458250868994" y="2504.0" />
+      <point x="4116.943332695548" y="2504.0" />
+      <point x="105.25" y="62.0" />
+    </edge>
+    <edge source="model.Game" target="model.piece.Color" relationship="TO_ONE">
+      <point x="-125.82142857142867" y="-150.0" />
+      <point x="569.8719041241184" y="2772.0" />
+      <point x="15.58928571428578" y="2772.0" />
+      <point x="15.58928571428578" y="726.0" />
+      <point x="582.0551504837251" y="726.0" />
+      <point x="582.0551504837251" y="686.0" />
+      <point x="1228.7123917748918" y="686.0" />
+      <point x="-29.25" y="50.5" />
+    </edge>
+    <edge source="model.piece.Piece" target="model.validators.SpecialValidatorMove" relationship="DEPENDENCY">
+      <point x="108.40000000000009" y="-127.5" />
+      <point x="341.7165584415584" y="1590.0" />
+      <point x="650.6498640459495" y="1590.0" />
+      <point x="650.6498640459495" y="1570.0" />
+      <point x="1389.0040584415585" y="1570.0" />
+      <point x="-71.75" y="28.0" />
+    </edge>
+    <edge source="model.validators.SpecialValidatorMove" target="model.validators.ValidatorMove" relationship="INTERFACE_GENERALIZATION">
+      <point x="107.625" y="-28.0" />
+      <point x="1568.3790584415585" y="1258.0" />
+      <point x="1669.3790584415585" y="1258.0" />
+      <point x="-99.375" y="28.0" />
+    </edge>
+    <edge source="model.tile.TileEmpty" target="model.tile.Tile" relationship="REALIZATION">
+      <point x="82.875" y="95.0" />
+      <point x="1719.8058604244898" y="466.0" />
+      <point x="3157.2405663780664" y="466.0" />
+      <point x="0.0" y="-83.5" />
+    </edge>
+    <edge source="model.piece.SpecialPiece" target="model.piece.Color" relationship="TO_ONE">
+      <point x="-103.0" y="-139.0" />
+      <point x="1394.3165584415585" y="1958.0" />
+      <point x="1306.7540584415585" y="1958.0" />
+      <point x="1306.7540584415585" y="726.0" />
+      <point x="582.0551504837251" y="726.0" />
+      <point x="582.0551504837251" y="686.0" />
+      <point x="1228.7123917748918" y="686.0" />
+      <point x="-29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.CheckMateValidator" target="model.validators.ValidatorMove" relationship="DEPENDENCY">
+      <point x="-31.41666666666697" y="-62.0" />
+      <point x="4258.609999362214" y="2524.0" />
+      <point x="4284.526666028881" y="2524.0" />
+      <point x="4284.526666028881" y="1278.0" />
+      <point x="1770.4093171503919" y="1278.0" />
+      <point x="1770.4093171503919" y="1268.0" />
+      <point x="1801.8790584415585" y="1268.0" />
+      <point x="33.125" y="28.0" />
+    </edge>
+    <edge source="model.piece.SpecialPiece" target="model.validators.SpecialValidatorMove" relationship="DEPENDENCY">
+      <point x="-206.0" y="-139.0" />
+      <point x="1291.3165584415585" y="1958.0" />
+      <point x="1295.7540584415585" y="1958.0" />
+      <point x="1295.7540584415585" y="1590.0" />
+      <point x="650.6498640459495" y="1590.0" />
+      <point x="650.6498640459495" y="1570.0" />
+      <point x="1389.0040584415585" y="1570.0" />
+      <point x="-71.75" y="28.0" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.WinCondition" relationship="TO_ONE">
+      <point x="-23.90909090909099" y="-73.0" />
+      <point x="671.7842417864563" y="2524.0" />
+      <point x="684.6933326955473" y="2524.0" />
+      <point x="684.6933326955473" y="2288.0" />
+      <point x="313.0665584415585" y="2288.0" />
+      <point x="-69.25" y="51.0" />
+    </edge>
+    <edge source="model.validators.move.HorizontalMoveValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="106.0" y="-62.0" />
+      <point x="3147.976280663781" y="1540.0" />
+      <point x="3367.5683326955473" y="1540.0" />
+      <point x="3367.5683326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.Game" target="model.WinCondition" relationship="TO_ONE">
+      <point x="-48.39285714285711" y="-150.0" />
+      <point x="647.3004755526899" y="2732.0" />
+      <point x="59.58928571428578" y="2732.0" />
+      <point x="59.58928571428578" y="2318.0" />
+      <point x="684.6933326955473" y="2318.0" />
+      <point x="684.6933326955473" y="2288.0" />
+      <point x="313.0665584415585" y="2288.0" />
+      <point x="-69.25" y="51.0" />
+    </edge>
+    <edge source="model.validators.move.DiagonalMoveValidator" target="model.validators.ClassicValidator" relationship="GENERALIZATION">
+      <point x="-106.0" y="-62.0" />
+      <point x="3508.6933326955473" y="1590.0" />
+      <point x="2941.705419601505" y="1590.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="model.validators.CheckValidator" target="model.WinCondition" relationship="TO_ONE">
+      <point x="-175.41666666666669" y="-62.0" />
+      <point x="3836.2766660288808" y="2318.0" />
+      <point x="684.6933326955473" y="2318.0" />
+      <point x="684.6933326955473" y="2288.0" />
+      <point x="313.0665584415585" y="2288.0" />
+      <point x="-69.25" y="51.0" />
+    </edge>
+    <edge source="model.validators.move.PawnCaptureMoveValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="53.0" y="-39.5" />
+      <point x="2808.976280663781" y="1510.0" />
+      <point x="2701.476280663781" y="1510.0" />
+      <point x="2701.476280663781" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.move.HorizontalMoveValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="-53.0" y="-62.0" />
+      <point x="2988.976280663781" y="1510.0" />
+      <point x="3217.9197053157905" y="1510.0" />
+      <point x="3217.9197053157905" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.tile.TileWithPiece" target="model.tile.Tile" relationship="REALIZATION">
+      <point x="88.39999999999998" y="95.0" />
+      <point x="1658.40586042449" y="232.0" />
+      <point x="3157.2405663780664" y="232.0" />
+      <point x="0.0" y="-83.5" />
+    </edge>
+    <edge source="model.validators.move.PawnCaptureMoveValidator" target="model.validators.ClassicValidator" relationship="GENERALIZATION">
+      <point x="106.0" y="-39.5" />
+      <point x="2861.976280663781" y="1590.0" />
+      <point x="2941.705419601505" y="1590.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="model.validators.CheckMateValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="31.416666666666515" y="-62.0" />
+      <point x="4321.443332695548" y="2524.0" />
+      <point x="4295.526666028881" y="2524.0" />
+      <point x="4295.526666028881" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.piece.NormalPiece" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-143.75" y="-139.0" />
+      <point x="684.5665584415585" y="1928.0" />
+      <point x="593.0551504837251" y="1928.0" />
+      <point x="593.0551504837251" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.ClassicValidator" target="model.validators.ValidatorMove" relationship="REALIZATION">
+      <point x="-143.60000000000002" y="-94.5" />
+      <point x="2798.1054196015048" y="1268.0" />
+      <point x="1868.1290584415585" y="1268.0" />
+      <point x="99.375" y="28.0" />
+    </edge>
+    <edge source="model.piece.NormalPiece" target="model.piece.Piece" relationship="REALIZATION">
+      <point x="239.58333333333326" y="-139.0" />
+      <point x="1067.8998917748918" y="1958.0" />
+      <point x="1014.609999362214" y="1958.0" />
+      <point x="1014.609999362214" y="1888.0" />
+      <point x="323.64989177489156" y="1888.0" />
+      <point x="90.33333333333326" y="127.5" />
+    </edge>
+    <edge source="model.WinCondition" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="103.875" y="-51.0" />
+      <point x="486.1915584415585" y="1958.0" />
+      <point x="776.191530712616" y="1958.0" />
+      <point x="776.191530712616" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.move.JumpMoveValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="-53.0" y="-62.0" />
+      <point x="2417.976280663781" y="1570.0" />
+      <point x="2258.839193757823" y="1570.0" />
+      <point x="2258.839193757823" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.validators.CheckValidator" relationship="TO_ONE">
+      <point x="95.63636363636374" y="-73.0" />
+      <point x="791.329696331911" y="2524.0" />
+      <point x="3996.3458250868994" y="2524.0" />
+      <point x="3996.3458250868994" y="2504.0" />
+      <point x="3906.4433326955473" y="2504.0" />
+      <point x="-105.25" y="62.0" />
+    </edge>
+    <edge source="model.Game" target="model.validators.CheckMateValidator" relationship="TO_ONE">
+      <point x="67.75" y="-150.0" />
+      <point x="763.443332695547" y="2742.0" />
+      <point x="4195.776666028881" y="2742.0" />
+      <point x="-94.25" y="62.0" />
+    </edge>
+    <edge source="model.board.Board" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-72.33333333333326" y="-161.0" />
+      <point x="3148.734999362214" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.ValidatorMove" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-99.375" y="-28.0" />
+      <point x="1669.3790584415585" y="1110.0" />
+      <point x="1671.3468171503919" y="1110.0" />
+      <point x="1671.3468171503919" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.HorizontalMoveValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="0.0" y="-62.0" />
+      <point x="3041.976280663781" y="1520.0" />
+      <point x="3228.9197053157905" y="1520.0" />
+      <point x="3228.9197053157905" y="1100.0" />
+      <point x="3091.0683326955473" y="1100.0" />
+      <point x="3091.0683326955473" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.AntiPawnMoveValidator" target="model.validators.move.DiagonalMoveValidator" relationship="CREATE">
+      <point x="43.85714285714289" y="-62.0" />
+      <point x="3535.6136822297567" y="1938.0" />
+      <point x="3680.9433326955473" y="1938.0" />
+      <point x="66.25" y="62.0" />
+    </edge>
+    <edge source="model.validators.CheckMateValidator" target="model.validators.CheckValidator" relationship="TO_ONE">
+      <point x="-157.08333333333343" y="-62.0" />
+      <point x="4132.943332695548" y="2524.0" />
+      <point x="3996.3458250868994" y="2524.0" />
+      <point x="3996.3458250868994" y="2504.0" />
+      <point x="3906.4433326955473" y="2504.0" />
+      <point x="-105.25" y="62.0" />
+    </edge>
+    <edge source="model.validators.move.VerticalMoveValidator" target="model.validators.ClassicValidator" relationship="GENERALIZATION">
+      <point x="106.0" y="-62.0" />
+      <point x="2291.976280663781" y="1590.0" />
+      <point x="2941.705419601505" y="1590.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="model.piece.NormalPiece" target="model.validators.ValidatorMove" relationship="DEPENDENCY">
+      <point x="143.75" y="-139.0" />
+      <point x="972.0665584415585" y="1898.0" />
+      <point x="765.191530712616" y="1898.0" />
+      <point x="765.191530712616" y="1580.0" />
+      <point x="1614.7540584415585" y="1580.0" />
+      <point x="1614.7540584415585" y="1278.0" />
+      <point x="1770.4093171503919" y="1278.0" />
+      <point x="1770.4093171503919" y="1268.0" />
+      <point x="1801.8790584415585" y="1268.0" />
+      <point x="33.125" y="28.0" />
+    </edge>
+    <edge source="model.Game" target="model.validators.ClassicMover" relationship="TO_ONE">
+      <point x="-9.678571428571445" y="-150.0" />
+      <point x="686.0147612669757" y="2712.0" />
+      <point x="629.9433326955473" y="2712.0" />
+      <point x="-65.75" y="73.0" />
+    </edge>
+    <edge source="model.validators.move.JumpMoveValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-106.0" y="-62.0" />
+      <point x="2364.976280663781" y="1580.0" />
+      <point x="2247.839193757823" y="1580.0" />
+      <point x="2247.839193757823" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.Game" target="model.piece.Piece" relationship="TO_ONE">
+      <point x="-67.75" y="-150.0" />
+      <point x="627.943332695547" y="2742.0" />
+      <point x="48.58928571428578" y="2742.0" />
+      <point x="48.58928571428578" y="1948.0" />
+      <point x="214.8259838170584" y="1948.0" />
+      <point x="214.8259838170584" y="1938.0" />
+      <point x="233.3165584415583" y="1938.0" />
+      <point x="0.0" y="127.5" />
+    </edge>
+    <edge source="model.validators.move.AntiPawnMoveValidator" target="model.validators.ClassicValidator" relationship="GENERALIZATION">
+      <point x="-131.57142857142867" y="-62.0" />
+      <point x="3360.185110801185" y="1958.0" />
+      <point x="3247.4127886002884" y="1958.0" />
+      <point x="3247.4127886002884" y="1590.0" />
+      <point x="2941.705419601505" y="1590.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.validators.move.VerticalMoveValidator" relationship="CREATE">
+      <point x="-63.77777777777783" y="-62.0" />
+      <point x="2579.2905549177694" y="1938.0" />
+      <point x="2119.726280663781" y="1938.0" />
+      <point x="-66.25" y="62.0" />
+    </edge>
+    <edge source="model.validators.move.JumpMoveValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="0.0" y="-62.0" />
+      <point x="2470.976280663781" y="1560.0" />
+      <point x="2381.226280663781" y="1560.0" />
+      <point x="2381.226280663781" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.validators.CheckValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="105.25" y="-62.0" />
+      <point x="4116.943332695548" y="2318.0" />
+      <point x="4088.512491753566" y="2318.0" />
+      <point x="4088.512491753566" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.Game" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-106.46428571428578" y="-150.0" />
+      <point x="589.2290469812613" y="2762.0" />
+      <point x="26.58928571428578" y="2762.0" />
+      <point x="26.58928571428578" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.Game" target="model.validators.CheckValidator" relationship="CREATE">
+      <point x="48.39285714285711" y="-150.0" />
+      <point x="744.0861898384042" y="2732.0" />
+      <point x="4007.3458250868994" y="2732.0" />
+      <point x="4007.3458250868994" y="2504.0" />
+      <point x="4116.943332695548" y="2504.0" />
+      <point x="105.25" y="62.0" />
+    </edge>
+    <edge source="model.Game" target="model.validators.ClassicMover" relationship="CREATE">
+      <point x="9.678571428571445" y="-150.0" />
+      <point x="705.3719041241184" y="2712.0" />
+      <point x="761.4433326955473" y="2712.0" />
+      <point x="65.75" y="73.0" />
+    </edge>
+    <edge source="model.validators.PromotionValidator.Companion" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="96.40000000000009" y="-28.0" />
+      <point x="2328.5933326955474" y="2298.0" />
+      <point x="3225.6985028860026" y="2298.0" />
+      <point x="3225.6985028860026" y="1580.0" />
+      <point x="3411.5683326955473" y="1580.0" />
+      <point x="3411.5683326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.move.JumpMoveValidator" target="model.validators.ClassicValidator" relationship="GENERALIZATION">
+      <point x="106.0" y="-62.0" />
+      <point x="2576.976280663781" y="1590.0" />
+      <point x="2941.705419601505" y="1590.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="model.CustomGameEngine" target="model.Game" relationship="TO_ONE">
+      <point x="71.66666666666674" y="-73.0" />
+      <point x="762.3599993622138" y="3119.0" />
+      <point x="763.443332695547" y="3119.0" />
+      <point x="67.75" y="150.0" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.validators.PromotionValidator.Companion" relationship="DEPENDENCY">
+      <point x="23.90909090909099" y="-73.0" />
+      <point x="719.6024236046383" y="2484.0" />
+      <point x="2232.1933326955473" y="2484.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="model.validators.move.JumpMoveValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="53.0" y="-62.0" />
+      <point x="2523.976280663781" y="1550.0" />
+      <point x="2470.976280663781" y="1550.0" />
+      <point x="2470.976280663781" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.validators.move.PawnCaptureMoveValidator" relationship="CREATE">
+      <point x="31.888888888888914" y="-62.0" />
+      <point x="2674.9572215844364" y="1928.0" />
+      <point x="2822.226280663781" y="1928.0" />
+      <point x="66.25" y="39.5" />
+    </edge>
+    <edge source="model.validators.move.HorizontalMoveValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="53.0" y="-62.0" />
+      <point x="3094.976280663781" y="1530.0" />
+      <point x="3332.9708250868994" y="1530.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.ValidatorMove" target="model.validators.Response" relationship="DEPENDENCY">
+      <point x="33.125" y="-28.0" />
+      <point x="1801.8790584415585" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.Game" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="106.46428571428555" y="-150.0" />
+      <point x="802.1576184098326" y="2762.0" />
+      <point x="4532.943332695548" y="2762.0" />
+      <point x="4532.943332695548" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.PromotionValidator.Companion" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-96.40000000000009" y="-28.0" />
+      <point x="2135.793332695547" y="2298.0" />
+      <point x="1126.3165584415585" y="2298.0" />
+      <point x="1126.3165584415585" y="1110.0" />
+      <point x="1340.0058326955473" y="1110.0" />
+      <point x="1340.0058326955473" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.HorizontalMoveValidator" target="model.validators.ClassicValidator" relationship="GENERALIZATION">
+      <point x="-106.0" y="-62.0" />
+      <point x="2935.976280663781" y="1590.0" />
+      <point x="2941.705419601505" y="1590.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="model.validators.CheckMateValidator" target="model.validators.CheckValidator" relationship="DEPENDENCY">
+      <point x="-94.25" y="-62.0" />
+      <point x="4195.776666028881" y="2514.0" />
+      <point x="4007.3458250868994" y="2514.0" />
+      <point x="4007.3458250868994" y="2504.0" />
+      <point x="4116.943332695548" y="2504.0" />
+      <point x="105.25" y="62.0" />
+    </edge>
+    <edge source="model.validators.move.VerticalMoveValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="53.0" y="-62.0" />
+      <point x="2238.976280663781" y="1580.0" />
+      <point x="2180.476280663781" y="1580.0" />
+      <point x="2180.476280663781" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.CheckValidator" target="model.WinCondition" relationship="DEPENDENCY">
+      <point x="-105.25" y="-62.0" />
+      <point x="3906.4433326955473" y="2308.0" />
+      <point x="695.6933326955473" y="2308.0" />
+      <point x="695.6933326955473" y="2278.0" />
+      <point x="451.5665584415585" y="2278.0" />
+      <point x="69.25" y="51.0" />
+    </edge>
+    <edge source="model.validators.CheckMateValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="94.25" y="-62.0" />
+      <point x="4384.276666028881" y="2514.0" />
+      <point x="4306.526666028881" y="2514.0" />
+      <point x="4306.526666028881" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.WinCondition" target="model.piece.Piece" relationship="TO_MANY">
+      <point x="-34.625" y="-51.0" />
+      <point x="347.6915584415585" y="1948.0" />
+      <point x="214.8259838170584" y="1948.0" />
+      <point x="214.8259838170584" y="1938.0" />
+      <point x="233.3165584415583" y="1938.0" />
+      <point x="0.0" y="127.5" />
+    </edge>
+    <edge source="model.piece.SpecialPiece" target="model.piece.Piece" relationship="REALIZATION">
+      <point x="-309.0" y="-139.0" />
+      <point x="1188.3165584415585" y="1958.0" />
+      <point x="1014.609999362214" y="1958.0" />
+      <point x="1014.609999362214" y="1888.0" />
+      <point x="323.64989177489156" y="1888.0" />
+      <point x="90.33333333333326" y="127.5" />
+    </edge>
+    <edge source="model.validators.move.DiagonalMoveValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="0.0" y="-62.0" />
+      <point x="3614.6933326955473" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.WinCondition" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="34.625" y="-51.0" />
+      <point x="416.9415584415585" y="1948.0" />
+      <point x="520.9623917748918" y="1948.0" />
+      <point x="520.9623917748918" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.piece.NormalPiece" target="model.validators.ValidatorMove" relationship="TO_MANY">
+      <point x="-47.91666666666674" y="-139.0" />
+      <point x="780.3998917748918" y="1918.0" />
+      <point x="639.6498640459495" y="1918.0" />
+      <point x="639.6498640459495" y="1268.0" />
+      <point x="1759.4093171503919" y="1268.0" />
+      <point x="1759.4093171503919" y="1258.0" />
+      <point x="1735.6290584415585" y="1258.0" />
+      <point x="-33.125" y="28.0" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.piece.Piece" relationship="TO_ONE">
+      <point x="-71.72727272727275" y="-73.0" />
+      <point x="623.9660599682745" y="2504.0" />
+      <point x="214.8259838170584" y="2504.0" />
+      <point x="214.8259838170584" y="1938.0" />
+      <point x="233.3165584415583" y="1938.0" />
+      <point x="0.0" y="127.5" />
+    </edge>
+    <edge source="model.Game" target="model.piece.Piece" relationship="DEPENDENCY">
+      <point x="-87.10714285714289" y="-150.0" />
+      <point x="608.5861898384042" y="2752.0" />
+      <point x="37.58928571428578" y="2752.0" />
+      <point x="37.58928571428578" y="1958.0" />
+      <point x="163.85999936221378" y="1958.0" />
+      <point x="163.85999936221378" y="1938.0" />
+      <point x="142.98322510822481" y="1938.0" />
+      <point x="-90.33333333333337" y="127.5" />
+    </edge>
+    <edge source="model.validators.PromotionValidator.Companion" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="48.200000000000045" y="-28.0" />
+      <point x="2280.3933326955475" y="2288.0" />
+      <point x="3214.6985028860026" y="2288.0" />
+      <point x="3214.6985028860026" y="1570.0" />
+      <point x="3400.5683326955473" y="1570.0" />
+      <point x="3400.5683326955473" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.piece.NormalPiece" relationship="CREATE">
+      <point x="-47.818181818181756" y="-73.0" />
+      <point x="647.8751508773655" y="2494.0" />
+      <point x="588.9755739867139" y="2494.0" />
+      <point x="588.9755739867139" y="2298.0" />
+      <point x="828.3165584415585" y="2298.0" />
+      <point x="0.0" y="139.0" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="-95.66666666666663" y="-62.0" />
+      <point x="2547.4016660288808" y="1948.0" />
+      <point x="2042.9762806637807" y="1948.0" />
+      <point x="2042.9762806637807" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="127.55555555555566" y="-62.0" />
+      <point x="2770.623888251103" y="1958.0" />
+      <point x="3195.976280663781" y="1958.0" />
+      <point x="3195.976280663781" y="1560.0" />
+      <point x="3389.5683326955473" y="1560.0" />
+      <point x="3389.5683326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.move.AntiPawnMoveValidator" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="-43.85714285714289" y="-62.0" />
+      <point x="3447.899396515471" y="1958.0" />
+      <point x="3444.5683326955473" y="1958.0" />
+      <point x="3444.5683326955473" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.Game" target="model.validators.CheckMateValidator" relationship="CREATE">
+      <point x="87.10714285714289" y="-150.0" />
+      <point x="782.8004755526899" y="2752.0" />
+      <point x="4384.276666028881" y="2752.0" />
+      <point x="94.25" y="62.0" />
+    </edge>
+    <edge source="model.validators.SpecialValidatorMove" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-107.625" y="-28.0" />
+      <point x="1353.1290584415585" y="1258.0" />
+      <point x="1340.0058326955473" y="1258.0" />
+      <point x="1340.0058326955473" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.CustomGameEngine" target="model.Game" relationship="DEPENDENCY">
+      <point x="0.0" y="-73.0" />
+      <point x="690.693332695547" y="3119.0" />
+      <point x="627.943332695547" y="3119.0" />
+      <point x="-67.75" y="150.0" />
+    </edge>
+    <edge source="model.validators.move.VerticalMoveValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="-53.0" y="-62.0" />
+      <point x="2132.976280663781" y="1590.0" />
+      <point x="2138.756539372614" y="1590.0" />
+      <point x="2138.756539372614" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.move.VerticalMoveValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="0.0" y="-62.0" />
+      <point x="2185.976280663781" y="1590.0" />
+      <point x="2169.476280663781" y="1590.0" />
+      <point x="2169.476280663781" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.VerticalMoveValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-106.0" y="-62.0" />
+      <point x="2079.976280663781" y="1590.0" />
+      <point x="2127.756539372614" y="1590.0" />
+      <point x="2127.756539372614" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.tile.Tile" target="model.piece.Piece" relationship="DEPENDENCY">
+      <point x="-73.66666666666674" y="83.5" />
+      <point x="3083.8238997113995" y="696.0" />
+      <point x="317.86307398671397" y="696.0" />
+      <point x="317.86307398671397" y="1590.0" />
+      <point x="287.51655844155835" y="1590.0" />
+      <point x="54.200000000000045" y="-127.5" />
+    </edge>
+    <edge source="model.validators.move.PawnCaptureMoveValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-53.0" y="-39.5" />
+      <point x="2702.976280663781" y="1530.0" />
+      <point x="2580.089193757823" y="1530.0" />
+      <point x="2580.089193757823" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.PawnMoveValidator" target="model.validators.move.VerticalMoveValidator" relationship="TO_ONE">
+      <point x="-31.888888888888914" y="-62.0" />
+      <point x="2611.179443806658" y="1928.0" />
+      <point x="2252.226280663781" y="1928.0" />
+      <point x="66.25" y="62.0" />
+    </edge>
+    <edge source="model.Game" target="model.board.Board" relationship="TO_ONE">
+      <point x="125.82142857142867" y="-150.0" />
+      <point x="821.5147612669757" y="2772.0" />
+      <point x="4543.943332695548" y="2772.0" />
+      <point x="4543.943332695548" y="1120.0" />
+      <point x="3293.4016660288808" y="1120.0" />
+      <point x="72.33333333333326" y="161.0" />
+    </edge>
+    <edge source="model.validators.SpecialValidatorMove" target="model.board.Board" relationship="DEPENDENCY">
+      <point x="35.875" y="-28.0" />
+      <point x="1496.6290584415585" y="1248.0" />
+      <point x="1410.0683326955473" y="1248.0" />
+      <point x="1410.0683326955473" y="1140.0" />
+      <point x="3332.9708250868994" y="1140.0" />
+      <point x="3332.9708250868994" y="1090.0" />
+      <point x="3221.0683326955473" y="1090.0" />
+      <point x="0.0" y="161.0" />
+    </edge>
+    <edge source="model.piece.SpecialPiece" target="model.validators.SpecialValidatorMove" relationship="TO_MANY">
+      <point x="0.0" y="-139.0" />
+      <point x="1497.3165584415585" y="1958.0" />
+      <point x="1518.2880739867142" y="1958.0" />
+      <point x="1518.2880739867142" y="1570.0" />
+      <point x="1532.5040584415585" y="1570.0" />
+      <point x="71.75" y="28.0" />
+    </edge>
+    <edge source="model.validators.SpecialValidatorMove" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="-35.875" y="-28.0" />
+      <point x="1424.8790584415585" y="1258.0" />
+      <point x="1399.0683326955473" y="1258.0" />
+      <point x="1399.0683326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.CustomGameEngine" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="-71.66666666666674" y="-73.0" />
+      <point x="619.0266660288803" y="3119.0" />
+      <point x="0.0" y="3119.0" />
+      <point x="0.0" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.DiagonalMoveValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="53.0" y="-62.0" />
+      <point x="3667.6933326955473" y="1590.0" />
+      <point x="3680.6933326955473" y="1590.0" />
+      <point x="3680.6933326955473" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.ClassicValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="71.79999999999995" y="-94.5" />
+      <point x="3013.505419601505" y="1268.0" />
+      <point x="3045.5880739867143" y="1268.0" />
+      <point x="3045.5880739867143" y="1130.0" />
+      <point x="3340.0683326955473" y="1130.0" />
+      <point x="3340.0683326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.move.PawnCaptureMoveValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="0.0" y="-39.5" />
+      <point x="2755.976280663781" y="1520.0" />
+      <point x="2618.976280663781" y="1520.0" />
+      <point x="2618.976280663781" y="1110.0" />
+      <point x="3102.0683326955473" y="1110.0" />
+      <point x="3102.0683326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.piece.SpecialPiece" target="model.validators.ValidatorMove" relationship="DEPENDENCY">
+      <point x="309.0" y="-139.0" />
+      <point x="1806.3165584415585" y="1958.0" />
+      <point x="1770.4093171503919" y="1958.0" />
+      <point x="1770.4093171503919" y="1268.0" />
+      <point x="1801.8790584415585" y="1268.0" />
+      <point x="33.125" y="28.0" />
+    </edge>
+    <edge source="model.validators.CheckMateValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="157.08333333333348" y="-62.0" />
+      <point x="4447.109999362214" y="2504.0" />
+      <point x="4355.595825086899" y="2504.0" />
+      <point x="4355.595825086899" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.tile.TileEmpty" target="model.piece.Piece" relationship="TO_ONE">
+      <point x="-82.875" y="95.0" />
+      <point x="1554.0558604244898" y="466.0" />
+      <point x="136.02666602888075" y="466.0" />
+      <point x="136.02666602888075" y="1590.0" />
+      <point x="124.91655844155821" y="1590.0" />
+      <point x="-108.40000000000009" y="-127.5" />
+    </edge>
+    <edge source="model.validators.move.AntiPawnMoveValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="131.57142857142867" y="-62.0" />
+      <point x="3623.3279679440425" y="1958.0" />
+      <point x="3768.6933326955473" y="1958.0" />
+      <point x="3768.6933326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="71.72727272727275" y="-73.0" />
+      <point x="767.42060542282" y="2504.0" />
+      <point x="3790.693332695547" y="2504.0" />
+      <point x="3790.6933326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.move.AntiPawnMoveValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="87.71428571428555" y="-62.0" />
+      <point x="3579.4708250868994" y="1948.0" />
+      <point x="3757.6933326955473" y="1948.0" />
+      <point x="3757.6933326955473" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.AntiPawnMoveValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="-87.71428571428578" y="-62.0" />
+      <point x="3404.0422536583283" y="1958.0" />
+      <point x="3433.5683326955473" y="1958.0" />
+      <point x="3433.5683326955473" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.piece.Piece" relationship="DEPENDENCY">
+      <point x="-95.63636363636351" y="-73.0" />
+      <point x="600.0569690591838" y="2514.0" />
+      <point x="163.85999936221378" y="2514.0" />
+      <point x="163.85999936221378" y="1938.0" />
+      <point x="142.98322510822481" y="1938.0" />
+      <point x="-90.33333333333337" y="127.5" />
+    </edge>
+    <edge source="model.piece.NormalPiece" target="model.validators.SpecialValidatorMove" relationship="DEPENDENCY">
+      <point x="47.91666666666674" y="-139.0" />
+      <point x="876.2332251082253" y="1908.0" />
+      <point x="650.6498640459495" y="1908.0" />
+      <point x="650.6498640459495" y="1570.0" />
+      <point x="1389.0040584415585" y="1570.0" />
+      <point x="-71.75" y="28.0" />
+    </edge>
+    <edge source="model.validators.move.DiagonalMoveValidator" target="model.tile.Tile" relationship="DEPENDENCY">
+      <point x="106.0" y="-62.0" />
+      <point x="3720.6933326955473" y="1590.0" />
+      <point x="3691.6933326955473" y="1590.0" />
+      <point x="3691.6933326955473" y="1130.0" />
+      <point x="3768.6933326955473" y="1130.0" />
+      <point x="3768.6933326955473" y="706.0" />
+      <point x="3347.6905663780663" y="706.0" />
+      <point x="3347.6905663780663" y="696.0" />
+      <point x="3231.157233044733" y="696.0" />
+      <point x="73.66666666666669" y="83.5" />
+    </edge>
+    <edge source="model.validators.ClassicMover" target="model.WinCondition" relationship="DEPENDENCY">
+      <point x="0.0" y="-73.0" />
+      <point x="695.6933326955473" y="2278.0" />
+      <point x="451.5665584415585" y="2278.0" />
+      <point x="69.25" y="51.0" />
+    </edge>
+    <edge source="model.validators.PromotionValidator.Companion" target="model.validators.PromotionValidator" relationship="INNER_CLASS">
+      <point x="0.0" y="-28.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="model.piece.SpecialPiece" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="103.0" y="-139.0" />
+      <point x="1600.3165584415585" y="1958.0" />
+      <point x="1625.7540584415585" y="1958.0" />
+      <point x="1625.7540584415585" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.ClassicValidator" target="model.piece.Color" relationship="DEPENDENCY">
+      <point x="0.0" y="-94.5" />
+      <point x="2941.705419601505" y="1268.0" />
+      <point x="2911.3054196015046" y="1268.0" />
+      <point x="2911.3054196015046" y="716.0" />
+      <point x="2031.9762806637807" y="716.0" />
+      <point x="2031.9762806637807" y="686.0" />
+      <point x="1287.2123917748918" y="686.0" />
+      <point x="29.25" y="50.5" />
+    </edge>
+    <edge source="model.validators.move.AntiPawnMoveValidator" target="model.validators.move.DiagonalMoveValidator" relationship="TO_ONE">
+      <point x="0.0" y="-62.0" />
+      <point x="3491.7565393726136" y="1928.0" />
+      <point x="3548.4433326955473" y="1928.0" />
+      <point x="-66.25" y="62.0" />
+    </edge>
+    <edge source="model.validators.ClassicValidator" target="model.validators.Response" relationship="CREATE">
+      <point x="-71.80000000000007" y="-94.5" />
+      <point x="2869.905419601505" y="1268.0" />
+      <point x="2868.856539372614" y="1268.0" />
+      <point x="2868.856539372614" y="1150.0" />
+      <point x="2465.476280663781" y="1150.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="model.tile.TileWithPiece" target="model.piece.Piece" relationship="TO_ONE">
+      <point x="-88.39999999999998" y="95.0" />
+      <point x="1481.60586042449" y="222.0" />
+      <point x="136.02666602888075" y="222.0" />
+      <point x="136.02666602888075" y="1590.0" />
+      <point x="124.91655844155821" y="1590.0" />
+      <point x="-108.40000000000009" y="-127.5" />
+    </edge>
+    <edge source="model.WinCondition" target="model.piece.Piece" relationship="DEPENDENCY">
+      <point x="-103.875" y="-51.0" />
+      <point x="278.4415584415585" y="1958.0" />
+      <point x="163.85999936221378" y="1958.0" />
+      <point x="163.85999936221378" y="1938.0" />
+      <point x="142.98322510822481" y="1938.0" />
+      <point x="-90.33333333333337" y="127.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7000000000000001" showDependencies="true" x="1071.6634624889216" y="364.53087612825937" />
+  <SelectedNodes>
+    <node>model.tile.Tile</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
